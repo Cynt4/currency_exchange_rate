@@ -33,7 +33,7 @@ app.post("/", function(req, res) {
 
         console.log(rate);
 
-        res.write(`<h1>1 ${base} is currently worth ${rate} ${symbols}</h1>`)
+        res.write(`<h1>1 ${base} is currently worth ${rate} ${symbols}`)
         res.send();
 
     });
