@@ -14,6 +14,7 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
 
+    var amount = req.body.amount;
     var base = req.body.base;
     var symbols = req.body.symbols;
 
@@ -33,7 +34,10 @@ app.post("/", function(req, res) {
 
         console.log(rate);
 
-        res.write(`<h1>1 ${base} is currently worth ${rate} ${symbols}`)
+        rate = amount * rate;
+        let rounded = rate.toFixed(2);
+
+        res.write(`<h1> ${amount} ${base} is currently worth ${rounded} ${symbols}`)
         res.send();
 
     });
