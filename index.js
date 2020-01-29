@@ -14,11 +14,11 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
 
-    var amount = req.body.amount;
-    var base = req.body.base;
-    var symbols = req.body.symbols;
+    let amount = req.body.amount;
+    let base = req.body.base;
+    let symbols = req.body.symbols;
 
-    var options = {
+    let options = {
         url: "https://api.ratesapi.io/api/latest",
         method: "GET",
         qs: {
@@ -28,9 +28,9 @@ app.post("/", function(req, res) {
     };
 
     request(options, function(error, response, body) {
-        var data = JSON.parse(body);
-        var price = data.rates;
-        var rate = Object.values(price);
+        let data = JSON.parse(body);
+        let price = data.rates;
+        let rate = Object.values(price);
 
         console.log(rate);
 

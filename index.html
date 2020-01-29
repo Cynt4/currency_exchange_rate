@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Currency Exchange Rate</title>
 </head>
 <body>
+    <div class="jumbotron">
     <h1>Currency Exchange Rate</h1>
-    <form action="/" method="post">
-    <input type="text" name="amount" placeholder="quantity">
-    <select name="base" id="inputCurrency">
+    <div class="form-group">
+    <form action="/" class="form-inline" method="post">
+    <input type="text" class="form-control" name="amount" placeholder="quantity">
+    <select name="base" class="form-control" id="inputCurrency">
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>
@@ -25,7 +28,7 @@
         <option value="CZK">CZK</option>
         <option value="SEK">SEK</option>
     </select>
-    <select name="symbols" id="outputCurrency">
+    <select name="symbols" class="form-control" id="outputCurrency">
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>
@@ -40,7 +43,9 @@
         <option value="CZK">CZK</option>
         <option value="SEK">SEK</option>
     </select>
-    <button type=submit>Check</button>
+    <button type=submit class="btn btn-dark">Check</button>
     </form>
+</div>
+</div>
 </body>
 </html>
